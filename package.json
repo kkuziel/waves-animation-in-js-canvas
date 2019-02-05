@@ -1,0 +1,11 @@
+{
+  "name": "waves-animation-in-js",
+  "version": "1.0.0",
+  "description": "Waves animation in js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krzysztof Kuziel",
+  "license": "MIT"
+}

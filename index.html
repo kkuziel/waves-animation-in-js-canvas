@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Waves animation in JS</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Waves animation in JS">
+  <meta name="keywords" contens="js, javascript, html, css, canvas, animation">
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #f6f8fc 0%, #94dfff 60%);
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .grey {
+      fill: #E6E6E6;
+    }
+
+    .pink {
+      fill: #FF6666;
+    }
+
+    #ship {
+      width: 7%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: -10%;
+    }
+  </style>
+  <canvas></canvas>
+  <svg id="ship" viewBox="0 0 21000 29700">
+    <g>
+      <polygon class="grey" points="3141,16981 17420,16981 15003,23697 5557,23697 " />
+      <polygon class="pink" points="17420,16981 3141,16981 3375,17684 17185,17684 " />
+      <rect class="pink" x="10002" y="3572" width="556" height="13409" />
+      <polygon class="grey" points="10558,3572 17420,15838 10558,15838 " />
+      <polygon class="pink" points="10558,15838 17420,15838 16562,14305 10558,14305 " />
+      <polygon class="pink" points="10558,12771 15704,12771 14847,11238 10558,11238 " />
+      <polygon class="pink" points="10558,9705 13989,9705 13131,8172 10558,8172 " />
+      <polygon class="pink" points="10558,6638 12274,6638 11416,5105 10558,5105 " />
+    </g>
+  </svg>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
