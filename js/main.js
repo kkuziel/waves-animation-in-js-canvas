@@ -116,9 +116,6 @@
     moveShipId = setInterval(moveShip, 10000 / screenWidth);
   }
 
-  window.addEventListener('resize', recalculateCanvas);
-  window.removeEventListener("unload", recalculateCanvas);
-
   function recalculateCanvas() {
     screenWidth = window.innerWidth;
     screenHeight = window.innerHeight;
@@ -133,6 +130,9 @@
 
     startLoop();
   }
+
+  window.addEventListener('resize', recalculateCanvas);
+  window.removeEventListener("unload", recalculateCanvas);
 
   recalculateCanvas();
   requestAnimationFrame(draw);
