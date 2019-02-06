@@ -10,12 +10,13 @@
 
   var screenWidth;
   var screenHeight;
-  var shipComputed;
+
   var wave = {};
   var waveLength = 0;
   var wave2 = {};
   var wave3 = {};
   var waves = {};
+  var shipComputed;
 
   var moveWavesId;
   var moveShipId;
