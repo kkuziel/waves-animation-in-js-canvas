@@ -6,15 +6,11 @@
   var htmlCanvas = document.querySelector("canvas");
   var ctx = htmlCanvas.getContext('2d')
   var ship = window.document.querySelector('#ship');
+  var container = document.querySelector(".container");
 
-  var screenWidth = window.innerWidth;
-  var screenHeight = window.innerHeight;
-  var shipComputed = {
-    top: screenHeight / 2,
-    left: -10,
-    widthScreenWidthPercent: 0.07,
-  };
-
+  var screenWidth;
+  var screenHeight;
+  var shipComputed;
   var wave = {};
   var waveLength = 0;
   var wave2 = {};
@@ -117,8 +113,9 @@
   }
 
   function recalculateCanvas() {
-    screenWidth = window.innerWidth;
-    screenHeight = window.innerHeight;
+    var containerInfo = container.getBoundingClientRect();
+    screenWidth = containerInfo.width;
+    screenHeight = containerInfo.height;
     htmlCanvas.width = screenWidth;
     htmlCanvas.height = screenHeight;
 
@@ -128,10 +125,17 @@
     waveLength = 0;
     waves = {};
 
+    shipComputed = {
+      top: screenHeight / 2,
+      left: -10,
+      widthScreenWidthPercent: 0.07,
+    };
+
     startLoop();
   }
 
   window.addEventListener('resize', recalculateCanvas);
+  window.addEventListener('orientationchange', recalculateCanvas);
   window.removeEventListener("unload", recalculateCanvas);
 
   recalculateCanvas();
