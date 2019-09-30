@@ -70,8 +70,8 @@
     }
 
     ship.style.transform = 'rotate(' + shipComputed.angle + ')';
-    ship.style.left = shipComputed.left - (screenWidth * shipComputed.widthScreenWidthPercent / 2);
-    ship.style.top = shipComputed.top - (screenWidth * shipComputed.widthScreenWidthPercent);
+    ship.style.left = shipComputed.left - (screenWidth * shipComputed.widthScreenWidthPercent / 2) + 'px';
+    ship.style.top = shipComputed.top - (screenWidth * shipComputed.widthScreenWidthPercent) + 'px';
   }
 
   function initializeWaves() {
